@@ -1,0 +1,40 @@
+"TitelInformation Disclosure im Internet Explorer",Risiko
+"",?????
+Betroffene Systeme:,"nternet Explorer, Versionen 6 - 11, alle Windows-etriebssysteme"
+Sachstand:,"ie Zero-Day Schwachstelle ermöglicht einem Angreifer internenformationen auszulesen, z.B. lokale Adresspfade,etzwerkfreigaben, Rechnernamen und IP-Adressen vonystemen im internen Netz. Die Schwachstelle wurde bereitsermehrt in der Vergangenheit ausgenutzt."
+Bewertung:,"urch Ausführung von schädlichem Code kann ein Angreifernter Umständen sensible Informationen von Systemenuslesen und weitere Angriffe verfahren. Die Schwachstelle istergleichsweise einfach auszunutzen, da der Benutzer lediglichit dem Internet Explorer auf eine manipulierte URL zugreifenuss."
+Empfehlung:,"1)Microsoft hat die Schwachstelle mit seinem August-Patchday geschlossen, die Updates sollten auf denSystemen der Benutzer installiert werden."
+Quellen:,"VE-2013-7331ttp://www.securityweek.com/microsoft-patches-internet-xplorer-vulnerability-targeted-attackersttps://technet.microsoft.com/library/security/ms14-sep"
+"",
+Point of Contact,"ndré Zingsheim, azi@it-tuv.com, 0221/969789-83"
+"",
+"109876543215,764,948,595,016,514,946,510",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"109876543215,764,948,595,016,514,946,510"
+""
+""
+"109876543215,764,948,595,016,514,946,510"
+""
+""
+"109876543215,764,948,595,016,514,946,510",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,

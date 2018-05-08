@@ -1,0 +1,39 @@
+"",
+"",
+"TitelDiverse Schwachstellen erlauben Remote Code Execution",Risiko
+"",?????
+Betroffene Systeme:,"oogle Chrome, <= 37.0.2062.94"
+Sachstand:,"ber mehrere Schwachstellen in der Verarbeitung von Vektor-rafiken (SVG) sowie dem Objektmodell in HTML (DOM) kannin Angreifer eigenen Code innerhalb sowie außerhalb derandbox seines Opfers zur Ausführung bringen."
+Bewertung:,"it dem Einschleusen fremden Codes in Zielsysteme kann einngreifer potenziell beliebige Aktionen im Kontext desngemeldeten Benutzers ausführen. Dies wirkt im vorliegendenall umso schwerer, als auch ein Verlassen der von Googlehrome eigentlich eingerichteten Sandbox möglich ist, wodurchchadcode außerhalb des Browser-Tabs und somit system-zw. netzwerkweit mit den Rechten des angemeldetenenutzers ausgeführt werden kann.pdates auf nicht verwundbare Versionen sind bereitseröffentlicht."
+Empfehlung:,"1)Google Chrome sollte auf die Version 37.0.2062.94oder neuer aktualisiert werden."
+Quellen:,"VE-2014-3175ttp://www.securitytracker.com/id/1030767ttp://googlechromereleases.blogspot.de/2014/08/stable-hannel-update_26.html"
+"",
+Point of Contact,"ominik Neubauer, dne@it-tuv.com, 0221/969789-82"
+"",
+"1098765432110,0010,0010,008,709,2210,009,220",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"1098765432110,0010,0010,008,709,2210,009,220"
+""
+""
+"1098765432110,0010,0010,008,709,2210,009,220",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
