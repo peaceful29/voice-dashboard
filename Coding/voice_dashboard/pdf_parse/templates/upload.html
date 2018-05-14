@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <h3>Read File Content</h3>
-        <form enctype="multipart/form-data" action="" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Parse" onclick="location.href = '{% url 'parse_pdf' %}'">
-        </form>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile" multiple/>
+    <button type="submit">Upload</button>
+  </form>
+
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+{#  <p><a href="{% url 'home' %}">Return to home</a></p>#}
+{% endblock %}
