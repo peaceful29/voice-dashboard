@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'pdf_parse.apps.PdfParseConfig'
+    'pdf_parse'
 ]
 
 MIDDLEWARE = [

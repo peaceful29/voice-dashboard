@@ -4,12 +4,15 @@ import logging
 import os
 import errno
 import PyPDF2 as pyPdf
+import tabula
 from django.http import JsonResponse, HttpResponse
+import pandas as pd
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from voice_dashboard import settings
 # Create your views here.
 from django.core.files.storage import FileSystemStorage
+from .models import Metadata
 
 
 def upload_form(request):
@@ -50,3 +53,18 @@ def split_page(file):
         output_file.addPage(content.getPage(page))
         with open(os.path.join(file_path, 'page_' + str(page) + '.pdf'), "wb+") as outputStream:
             output_file.write(outputStream)
+            save_to_db()
+
+
+def save_to_db():
+    # pd = tabula.read_pdf(file, lattice=True, stream=False, guess=False,
+    #                      pandas_options={'header': None, 'error_bad_lines': False}, encoding='cp1252',
+    #                      kwargs='tabula.jar')
+    themen = '1'
+    vero = '2'
+    risko = '3'
+    betro = '4'
+    link = '5'
+    sachstand = '6'
+    db_object = Metadata(themen=themen, vero=vero, risko=risko, betro=betro, link=link, sachstand=sachstand)
+    db_object.save()
