@@ -1,0 +1,8 @@
+<form method="post" action="../uploaded/"> {% csrf_token %}
+    {% block content %}
+        {%for c in content %}
+            <h1>File {{c}} Uploaded!!!</h1>
+        {% endfor %}
+    {% endblock %}
+    <input type="submit" value="Parse"/>
+</form>

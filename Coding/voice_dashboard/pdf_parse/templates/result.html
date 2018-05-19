@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Themen</th>
+        <th>Vero</th>
+        <th>Risko</th>
+        <th>Betro</th>
+        <th>Link</th>
+        <th>Sachstand</th>
+    </tr>
+    {% for item in query_meta %}
+    <tr>
+        <td>{{ item.themen }}</td>
+        <td>{{ item.vero }}</td>
+        <td>{{ item.risko }}</td>
+        <td>{{ item.betro }}</td>
+        <td>{{ item.link }}</td>
+        <td>{{ item.sachstand }}</td>
+    </tr>
+    {% endfor %}
+</table>

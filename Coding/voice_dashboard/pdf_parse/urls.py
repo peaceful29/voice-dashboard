@@ -4,4 +4,6 @@ from . import views
 urlpatterns = [
     url(r'^form/$', views.upload_form),
     url(r'^upload/$', views.upload_multi_file),
+    url(r'^uploaded/$', views.parse_to_db),
+    url(r'^result/$', views.show_result),
 ]

@@ -20,7 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload/', include('pdf_parse.urls'))
+    path('parse/', include('pdf_parse.urls'))
 ]
 
 if settings.DEBUG:

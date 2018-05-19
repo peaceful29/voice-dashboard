@@ -29,16 +29,16 @@ def convert_pdf(path, format='text', codec='utf-8', password=''):
     soup = bs(text)
     prettyHTML = soup.prettify()
     print(prettyHTML)
-    html_file = open("../../Data/document-page0.xml", "w")
-    html_file.write(prettyHTML)
-    html_file.close()
-    fp.close()
-    device.close()
-    retstr.close()
+    # html_file = open("../../Data/document-page0.xml", "w")
+    # html_file.write(prettyHTML)
+    # html_file.close()
+    # fp.close()
+    # device.close()
+    # retstr.close()
     return text
 
 def main():
-    convert_pdf('../../Data/document-page0.pdf', format='xml')
+    convert_pdf('../../Data/20180316 Lagebericht_DE/page_3.pdf', format='text')
     print ('Done!')
 
 if __name__ == '__main__':

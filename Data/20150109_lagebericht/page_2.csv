@@ -1,0 +1,31 @@
+"TitelGoogle veröffentlicht Zeroday für Windows",Risiko
+"",?????
+"BetroffeneSysteme:",indows 8.1
+Sachstand:,"eit Windows Vista dient die „User Access Control (UAC)“ dazu, einemazu berechtigten Benutzer zeitweise höhere Privilegien unter Windowsu gewähren, beispielsweise zur Installation von Software oder für An-assungen im System. Dazu wird eine modale Dialogbox eingeblendet,ie Art und Umfang der erweiterten Rechte festlegt.n Windows 8.1 wurde durch das Google Project Zero eine Lücke ent-eckt, die einem Prozess erlaubt, höher privilegierte Funktionen ohne vor-erige UAC-Abfrage auszuführen.[1]"
+Bewertung:,"in Angreifer oder eine Malware kann die beschriebene Schwachstelleusnutzen. Durch die derzeit noch geringe Verbreitung von Windows 8.1m Firmenumfeld kann jedoch von einer mittleren Gefährdung ausge-angen werden."
+Empfehlung:,"er beschriebene Angriff kann verhindert werden, indem die Benutzer-ontensteuerung im Systemmanagementcenter auf die höchste Stufeesetzt wird. Dies kann manuell oder über entsprechende Gruppen-ichtlinien erfolgen."
+Quellen:,1] Meldung bei Google Project Zero
+"",
+"Point ofContact","ominik Neubauer, dne@it-tuv.com, 0221/969789-82"
+"109876543216,2110,001,955,311,3310,001,330",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"","6,21",,"0,00",,"1,95",,"5,31",,"1,33",,"0,0",,"1,33",
+"109876543216,2110,001,955,311,3310,001,330",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,
+"","6,21",,"0,00",,"1,95",,"5,31",,"1,33",,"0,0",,"1,33",

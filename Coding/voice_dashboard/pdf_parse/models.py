@@ -11,7 +11,7 @@ class File(models.Model):
 
 class Metadata(models.Model):
     # number = models.IntegerField()
-    # datum = models.DateTimeField()
+    # datum = models.DateField()
     themen = models.CharField(max_length=5000)
     vero =  models.CharField(max_length=5000)
     risko = models.CharField(max_length=5000)
