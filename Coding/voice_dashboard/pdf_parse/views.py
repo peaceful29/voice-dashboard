@@ -21,6 +21,7 @@ file_name = []
 file_type_1 = ['2014', '2015', '2016', '2017']
 file_type_2 = ['2018']
 
+
 def upload_form(request):
     return render(request, "upload.html", {})
 
@@ -49,6 +50,7 @@ def show_result(request):
         query_meta = Metadata.objects.all()
         return render(request, 'table-template.html', {'query_meta': query_meta})
         # return render(request, 'tables-advanced.html')
+
 
 def handle_uploaded_file(f):
     fs = FileSystemStorage(location='document/')
