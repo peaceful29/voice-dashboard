@@ -294,10 +294,10 @@
 										</a>
 										<ul class="nav nav-children">
 											<li>
-												<a href="">File Upload</a>
+												<a href="../report">Report</a>
 											</li>
 											<li>
-												<a>Report</a>
+												<a>File Upload</a>
 											</li>
 										</ul>
 									</li>
@@ -343,25 +343,23 @@
 								<table class="table table-bordered table-striped mb-none" id="datatable-default">
 									<thead>
 										<tr>
-											<th>Rendering engine</th>
-											<th>Browser</th>
-											<th>Platform(s)</th>
-											<th class="hidden-phone">Engine version</th>
-											<th class="hidden-phone">CSS grade</th>
+											<th>File Name</th>
+											<th>File</th>
 										</tr>
 									</thead>
 									<tbody>
 										{% for item in query_meta %}
                                             <tr>
-                                                <td>{{ item.vero }}</td>
-                                                <td>{{ item.risko }}</td>
-                                                <td>{{ item.betro }}</td>
-                                                <td>{{ item.link }}</td>
-                                                <td>{{ item.sachstand }}</td>
+                                                <td>{{ item.file_name }}</td>
+                                                <td>{{ item.file_object }}</td>
                                             </tr>
                                             {% endfor %}
 									</tbody>
 								</table>
+                                <form method="post" action="../upload/" enctype="multipart/form-data"> {% csrf_token %}
+                                    <input type="file" name="files" multiple/>
+                                    <input type="submit" value="Upload"/>
+                                </form>
 							</div>
 						</section>
                     <!-- end: page -->

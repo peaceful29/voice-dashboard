@@ -7,6 +7,7 @@ import os
 import PyPDF2 as pyPdf
 import shutil
 from pandas.io.common import EmptyDataError
+import datetime
 
 pd.set_option('display.max_colwidth', -1)
 
@@ -94,22 +95,22 @@ pd.set_option('display.max_colwidth', -1)
 #     main()
 #
 
-def string_clean(str):
-    return str.split('Risiko')[1].replace('\\r', ' ').replace('dtype: object', '').split('Name:')[0].replace('  ', '').replace('\\n', ' ')
-
-for file in os.listdir('../../Data/20150109_lagebericht'):
-    print('page_0' not in file)
-    if (('.csv' in file) and ('page_0' not in file) and ('page_1' not in file)):
-        print(file)
-        print(os.path.join('../../Data/20150109_lagebericht',file))
-        try:
-            df_1 = pd.read_csv(os.path.join('../../Data/20150109_lagebericht', file), encoding='ISO-8859-1',
-                               error_bad_lines=False)
-        except EmptyDataError:
-            df_1 = pd.DataFrame()
-        print (df_1.shape)
-        if ((df_1.empty == False) and (df_1.shape[0] > 4)):
-            print(string_clean(str(df_1.iloc[[2][0]])))
+# def string_clean(str):
+#     return str.split('Risiko')[1].replace('\\r', ' ').replace('dtype: object', '').split('Name:')[0].replace('  ', '').replace('\\n', ' ')
+# 
+# for file in os.listdir('../../Data/20150109_lagebericht'):
+#     print('page_0' not in file)
+#     if (('.csv' in file) and ('page_0' not in file) and ('page_1' not in file)):
+#         print(file)
+#         print(os.path.join('../../Data/20150109_lagebericht',file))
+#         try:
+#             df_1 = pd.read_csv(os.path.join('../../Data/20150109_lagebericht', file), encoding='ISO-8859-1',
+#                                error_bad_lines=False)
+#         except EmptyDataError:
+#             df_1 = pd.DataFrame()
+#         print (df_1.shape)
+#         if ((df_1.empty == False) and (df_1.shape[0] > 4)):
+#             print(string_clean(str(df_1.iloc[[2][0]])))
     # if ((df_1.empty == False) and ('Quellen:' in str(df_1.iloc[[5][0]])) and ('Sachstand:' in str(df_1.iloc[[2][0]]))):
     #         print(string_clean(str(df_1.iloc[[5][0]]).split('Quellen:')[1]))
             # print(str(df_1.iloc[[2][0]]).split('Bewertung:')[1].split('Risiko')[1].replace('\\r', ' ').replace('dtype: object', ''))
@@ -117,3 +118,25 @@ for file in os.listdir('../../Data/20150109_lagebericht'):
             # print(string_clean(str(df_1.iloc[[2][0]]).split('Sachstand:')[1]))
 
 
+pd = tabula.read_pdf('../../Data/20150109_lagebericht/page_3.pdf', stream=True, guess=False, output_format='dataFrame',
+                             pandas_options={'header': None, 'error_bad_lines': False}, encoding='cp1252')
+# print (pd[0].to_string(index=False))
+txt_full = (pd[0].to_string(index=False))
+# print (txt_full)
+
+title = txt_full.split("Risiko")[0]
+count = title.count('\n')
+title = title.split('\n')[count-1]
+sachstand = txt_full.split("Sachstand: ")[1].split('Bewertung:')[0].replace('\n','').replace('  ','')
+# print(txt_full)
+
+datum = title[0:10][:-1]
+print (title[10])
+dt = datetime.datetime.strptime('20120209', "%Y%m%d").date()
+print(dt)
+check_arr = ['Titel', 'Sachstand', 'Bewertung', 'Empfehlung', 'Quellen']
+print (all(x in txt_full for x in check_arr))
+# for txt, line in title:
+#     print(line)
+# sachstand = pd.to_string(index=False).split("Sachstand: ")[1].split('Bewertung:')[0]
+# print(sachstand)
